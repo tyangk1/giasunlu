@@ -9605,7 +9605,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-hide {
-  font: 0/0 a;
+  /*font: 0/0 a;*/
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -10386,4 +10386,128 @@ label {
     margin-right: 2rem;
     max-width: 200px;
   }
+}
+.blog-title {
+  line-height: 1.4;
+}
+.toc {
+  border: 1px solid #e8e8e8;
+  background: #f3f3f3;
+  padding: 0.8rem 1rem 1.5rem 1rem;
+  display: inline-block;
+}
+.toc>ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+.toc li {
+  margin-top: 0.5rem;
+}
+.blog-intro h2, .blog-content h2 {
+  margin-top: 1.7rem;
+  font-size: 1.5rem;
+}
+.blog-intro .callout, .blog-content .callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1rem 1.2rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background: #f3f3f3;
+  border-left: 6px solid #4CAF50;
+  font-weight: 600;
+}
+.blog-intro img, .blog-content img {
+  margin-top: 1.2rem;
+}
+.blog-intro h3, .blog-content h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+.blog-intro h2, .blog-intro h3, .blog-content h2, .blog-content h3 {
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.richtext_banner {
+  background: #215492;
+  color: #fff;
+  font-size: 1.25rem;
+}
+.richtext_banner-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+.richtext_banner-divide {
+  width: 200px;
+  height: 5px;
+  background: #fff;
+  display: inline-block;
+}
+.richtext_banner .fa-star {
+  color: #f3f300;
+  font-size: 1rem;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.richtext_banner .fa-trophy {
+  color: #ffff0b;
+  font-size: 1.5rem;
+}
+.company_intro {
+  background: #e8e8e8;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem 0.75rem;
+}
+.sidebar .title-underline {
+  border-bottom-width: 4px;
+}
+
+.title-underline {
+  border-bottom: 2px solid #FF6600;
+  padding-bottom: 0.5rem;
+}
+.sidebar li a {
+  color: #333;
+}
+.sidebar ul li {
+  margin-bottom: 1rem;
+}
+.list-angle li {
+  list-style: none!important;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.5em;
+}
+.btn-outline-primary {
+  color: #FF6600;
+  background-color: transparent;
+  background-image: none;
+  border-color: #FF6600;
+}
+
+.btn-sm {
+  border-radius: 3px;
+  padding: 0.3rem 1rem;
+}
+.list-usp {
+  padding-left: 0.5rem;
+}
+.list-usp li {
+  list-style: none!important;
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.5em;
+}
+.list-usp li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  color: #77B227;
+  position: absolute;
+  left: 3px;
+  top: 1px;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.d-inline-block {
+  display: inline-block;
 }
