@@ -120,7 +120,7 @@
             </div>
             <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
           </div>
-          <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="login.html">Quản lý tài khoản</a>
+          <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="my-account.html">Quản lý tài khoản</a>
           <div class="nav-item dropdown ml-4" style="margin-right: 100px">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
               <i class="fas fa-user"></i>
@@ -139,75 +139,160 @@
 </div>
 <!-- Navbar End -->
 
-<main role="main" style="background: #f3f3f3;">
+<main role="main">
   <div class="container alert-group">
   </div>
 
-  <section class="container py-lg-2">
 
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="bg-white victory-box px-lg-5 pt-lg-4 pb-lg-5">
+  <div class="container">
 
-          <h1 class="h3 mb-4">Thay đổi mật khẩu</h1>
+    <div class="row">
 
-          <form method="post" action="/change-password" class="check_validation" novalidate="">
-            <input type="hidden" name="_token" value="5invTcmXhcrg1nzMpbdqQLVmAbESgjq8R7loSW36">
-            <div class="form-group mb-4">
-              <label for="current_password">Nhập mật khẩu cũ của bạn</label>
+      <div class="col-lg-9 pl-lg-5">
 
-              <div class="input-group mt-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-key"></i></div>
-                </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item"><a href="/"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item"><a href="my-account.html">Tài khoản của tôi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">GD3669</li>
+          </ol>
+        </nav>
 
-                <input id="current_password" type="password" class="form-control" name="current_password" placeholder="Nhập mật khẩu cũ" required="">
+        <h3>Kinh nghiệm gia sư</h3>
 
-                <p class="invalid-feedback mb-0">Mật khẩu cũ là bắt buộc</p>
+
+        <form action="/myaccount/profile/experience" method="POST" novalidate="">
+          <input type="hidden" name="_token" value="ObYY9viIpfTwZ2tMWPEdDxUTH2WsLtz7EqYDSHC6">
+
+          <input type="hidden" name="target" value="">
+
+          <p class="mt-4">Bạn đã từng giảng dạy gia sư?</p>
+
+          <div class="mt-3 d-flex" id="experience_choice_group">
+            <div class="form-check form-check-radio">
+              <span>Có</span>
+              <input type="radio" name="experience_choice" value="1">
+              <span class="checkmark"></span>
+            </div>
+            <div class="form-check form-check-radio">
+              <span>Không</span>
+              <input type="radio" name="experience_choice" value="0" checked="checked">
+              <span class="checkmark"></span>
+            </div>
+          </div>
+
+          <div class="mt-2 experience-field none" id="experience_field_1">
+            <p class="mb-2">Liệt kê theo từng dòng, mỗi dòng ghi rõ gia sư môn, lớp hoặc cấp học. Ví dụ:</p>
+            <div class="text-muted mb-4">
+              <p class="mb-2">Gia sư môn toán, tiếng việt lớp 5</p>
+              <p class="mb-2">Gia sư môn hóa lớp 8</p>
+            </div>
+
+            <textarea class="form-control" name="experience" rows="8"></textarea>
+          </div>
+
+          <div class="mt-4 experience-field " id="experience_field_0">
+
+            <p>Bạn đã từng dạy kèm cho em trai, em gái?</p>
+
+            <div class="mt-3 d-flex" id="family_choice_group">
+              <div class="form-check form-check-radio">
+                <span>Có</span>
+                <input type="radio" name="family_choice" value="1">
+                <span class="checkmark"></span>
+              </div>
+              <div class="form-check form-check-radio">
+                <span>Không</span>
+                <input type="radio" name="family_choice" value="0" checked="checked">
+                <span class="checkmark"></span>
               </div>
             </div>
 
-            <p>Nếu bạn đã quên mật khẩu cũ, hãy <a href="/logout">Đăng xuất</a>, sau đó đến trang [Đăng nhập], nhấp vào phần [Quên mật khẩu].</p>
+            <div class="mt-2 family-field none">
 
-            <div class="form-group mt-4 mb-4">
-
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-key"></i></div>
-                </div>
-
-                <input id="new_password" type="password" class="form-control" name="new_password" placeholder="Tạo mật khẩu mới" required="">
-
-                <p class="invalid-feedback mb-0">Mật khẩu mới là bắt buộc</p>
-              </div>
-            </div>
-
-            <div class="form-group mb-4">
-
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-key"></i></div>
-                </div>
-
-                <input id="new_password_confirmation" type="password" class="form-control" name="new_password_confirmation" placeholder="Xác nhận mật khẩu mới" required="">
-
-                <p class="invalid-feedback mb-0">Xác nhận mật khẩu mới là bắt buộc</p>
+              <p class="mb-2">Liệt kê theo từng dòng, mỗi dòng ghi rõ bạn đã từng dạy kèm cho ai, môn học, lớp hoặc cấp học nào. Ví dụ:</p>
+              <div class="text-muted mb-4">
+                <p class="mb-2">Dạy kèm cho em trai môn toán, tiếng việt lớp 5</p>
+                <p class="mb-2">Dạy kèm cho em trai môn hóa lớp 8</p>
               </div>
 
+              <textarea class="form-control" name="family" rows="6"></textarea>
             </div>
 
-            <div class="mt-3 form-group mb-0 text-right">
-              <input type="submit" class="mt-2 btn btn-success font-weight-bold" value="Thay đổi">
-            </div>
+          </div>
 
-          </form>
 
-        </div><!-- end wrap -->
+          <div class="mt-4 text-right">
+            <a href="/myaccount/profile/tutor-kind" class="btn btn-secondary mr-4 btn-cancel">Quay lại</a>
+            <input type="submit" class="btn btn-primary" value="Tiếp theo">
+          </div>
+
+        </form>
       </div>
-    </div><!-- end row -->
 
-  </section>
+      <div class="col-lg-3 order-lg-first mt-5 mt-lg-0 ">
 
+        <div class="mb-2 h5">
+          <a href="/myaccount/profile">Hồ sơ gia sư</a>
+        </div>
+
+        <ul class="sidebar-nav list-unstyled">
+          <li class="nav-item">
+            <a href="profile-basic.html" class="nav-link"><i class="fas fa-caret-right mr-1"></i> Thông tin cơ bản <i class="ml-1 fas fa-exclamation-circle text-warning"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="identification.html" class="nav-link"><i class="fas fa-caret-right mr-1"></i> Thẻ căn cước <i class="ml-1 fas fa-exclamation-circle text-warning"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="tutor-kind.html" class="nav-link "><i class="fas fa-caret-right mr-1"></i> Vị trí gia sư <i class="ml-1 fas fa-exclamation-circle text-muted"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="experience.html" class="nav-link active"><i class="fas fa-caret-right mr-1"></i> Kinh nghiệm gia sư <i class="ml-1 fas fa-exclamation-circle text-muted"></i></a>
+          </li>
+        </ul>
+
+        <div class="mt-4 h5">
+          <span>Đăng ký gia sư</span>
+        </div>
+
+        <ul class="sidebar-nav list-unstyled">
+          <li class="nav-item">
+            <a href="/myaccount/register-teach" class="nav-link "><i class="fas fa-caret-right mr-1"></i> Đăng ký lớp phù hợp <i class="ml-1 fas fa-exclamation-circle text-warning"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="/myaccount/agree-term" class="nav-link "><i class="fas fa-caret-right mr-1"></i> Đồng ý điều khoản <i class="ml-1 fas fa-exclamation-circle text-warning"></i></a>
+          </li>
+        </ul>
+
+        <div class="mt-4 h5">
+          <span>Đào tạo</span>
+        </div>
+
+        <ul class="sidebar-nav list-unstyled">
+          <li class="nav-item">
+            <a href="/myaccount/training/behavior" class="nav-link "><i class="fas fa-caret-right mr-1"></i> Xử lý tình huống <i class="ml-1 fas fa-exclamation-circle text-warning"></i></a>
+          </li>
+        </ul>
+
+        <h5 class="mt-4">Số dư tài khoản</h5>
+        <h5 class="text-primary">0 ₫</h5>
+
+        <div class="mt-4 pt-2 h5">
+          <a href="/myaccount/mynote"><span>Note nhận lớp</span></a>
+        </div>
+
+        <div class="mt-4 h5">
+          <a href="/myaccount/myclass"><span>Lớp đã nhận</span></a>
+        </div>
+
+        <div class="mt-4 h5">
+          <a href="/myaccount/ticket">Báo cáo sự cố</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 </main>
 
