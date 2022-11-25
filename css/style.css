@@ -10948,3 +10948,10 @@ select.form-control:not([size]):not([multiple]) {
 .none {
   display: none;
 }
+.teacher_detail{
+  list-style: none;
+  -ms-text-size-adjust: 30%;
+}
+.content-inf{
+  margin-left: 40px;
+}
